@@ -124,10 +124,11 @@ public abstract class Guerriero {
 
 	public void aumentaExp(int exp) {
 		puntiEsperienza += exp;
+		controllaLivello();
 	}
 
 	public void controllaLivello(){
-		if(livello%Parametri.CAP_EXP==0)
+		if(puntiEsperienza%Parametri.CAP_EXP==0)
 			aumentaLivello();			
 	}
 
